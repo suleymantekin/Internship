@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mod2_Self_Assesment_Lab", "Mod2_Self_Assesment_Lab\Mod2_Self_Assesment_Lab.csproj", "{E39FAD43-61A8-4230-B5AE-44A3E1F22A1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E39FAD43-61A8-4230-B5AE-44A3E1F22A1A}.Debug|x86.ActiveCfg = Debug|x86
+		{E39FAD43-61A8-4230-B5AE-44A3E1F22A1A}.Debug|x86.Build.0 = Debug|x86
+		{E39FAD43-61A8-4230-B5AE-44A3E1F22A1A}.Release|x86.ActiveCfg = Release|x86
+		{E39FAD43-61A8-4230-B5AE-44A3E1F22A1A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
