@@ -69,7 +69,7 @@ namespace Mod3_Self_Assesment_Lab
         ~Person(){
             if (streamWriter != null)
             {
-                Dispose(true);            }
+                Dispose(false);            }
 
         }
 
