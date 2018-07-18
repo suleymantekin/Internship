@@ -1,0 +1,11 @@
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/LinqApp/bin/Debug/netcoreapp2.1/LinqApp.deps.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/LinqApp/bin/Debug/netcoreapp2.1/LinqApp.runtimeconfig.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/LinqApp/bin/Debug/netcoreapp2.1/LinqApp.runtimeconfig.dev.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/LinqApp/bin/Debug/netcoreapp2.1/LinqApp.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/LinqApp/bin/Debug/netcoreapp2.1/LinqApp.pdb
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/LinqApp/obj/Debug/netcoreapp2.1/LinqApp.csprojAssemblyReference.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/LinqApp/obj/Debug/netcoreapp2.1/LinqApp.csproj.CoreCompileInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/LinqApp/obj/Debug/netcoreapp2.1/LinqApp.AssemblyInfoInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/LinqApp/obj/Debug/netcoreapp2.1/LinqApp.AssemblyInfo.cs
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/LinqApp/obj/Debug/netcoreapp2.1/LinqApp.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/LinqApp/obj/Debug/netcoreapp2.1/LinqApp.pdb
