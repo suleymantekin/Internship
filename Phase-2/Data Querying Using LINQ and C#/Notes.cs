@@ -137,3 +137,63 @@ namespace Trimming {
 
 //As we see, when we declared the extension method, there are two parameters. But when calling the extension method, 
 //we just need to provide one argument - the argument for the first parameter is the caller double value itself in this example.
+
+//--------------------------------------------------------------------------------------------------------------------------
+
+// By using interfaces or abstract classes. If we attach extension methods to an interface or abstract class, 
+// all derived classes will have these extension methods attached too. Let's take a look at the example below.
+
+public interface IWorker {
+        string Name { get; set; }
+        int YearsOfExperience { get; set; }
+        string Scope { get; set; }
+    }
+
+    public class Writer : IWorker {
+        public string Name { get; set; }
+        public int YearsOfExperience { get; set; }
+        public string Scope { get; set; }
+        public void Write() { /*...*/ }
+    }
+
+    public class Teacher : IWorker {
+        public string Name { get; set; }
+        public int YearsOfExperience { get; set; }
+        public string Scope { get; set; }
+        public void Teach() { /*...*/ }
+    }
+// To attach a group of extension methods to the IWorker interface, we will create a static class to extend the IWorker interface:
+
+public static class IWorkerExtension {
+    public static void Introduce1(this IWorker worker) {
+        Console.WriteLine($"Hi, my name is {worker.Name}.");
+    }
+
+    public static void Introduce2(this IWorker worker) {
+        Console.WriteLine($"My major scope is {worker.Scope}.");
+    }
+
+    public static void Introduce3(this IWorker worker) {
+        Console.WriteLine($"I have {worker.YearsOfExperience} years experience.");
+    }
+}
+// After declaring the extension methods for IWorker, we can write and run the below code:
+
+static void Main(string[] args) {
+    var writer = new Writer {
+        Name = "Timothy",
+        Scope = ".NET Core",
+        YearsOfExperience = 15
+    };
+
+    writer.Introduce1();
+    writer.Introduce2();
+    writer.Introduce3();
+}
+// The output is:
+
+// Hi, my name is Timothy.
+// My major scope is .NET Core.
+// I have 15 years experience.
+
+//--------------------------------------------------------------------------------------------------------------------------
