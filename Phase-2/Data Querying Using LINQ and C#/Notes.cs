@@ -197,3 +197,35 @@ static void Main(string[] args) {
 // I have 15 years experience.
 
 //--------------------------------------------------------------------------------------------------------------------------
+
+// Lambda Expressions in LINQ
+// A lambda expression is an anonymous function that you can use to create delegates 
+// or expression tree types.
+
+class Program {
+    static void Main(string[] args) {
+        Action action = SayHello;
+        action();
+    }
+
+    static void SayHello() {
+        Console.WriteLine("Hello, World!");
+    }
+}
+
+// With lambda expression
+
+class Program {
+    static void Main(string[] args) {
+        Action action = () => { Console.WriteLine("Hello, World"); };
+        action();
+    }
+}
+
+// We can conclude that the evaluation result of a lambda expression is a delegate instance. 
+// Please note, don't confuse the evaluation result of a lambda expression a
+// nd the return value of the invocation of a lambda expression. In this case, 
+// the evaluation result of the lambda expression is an Action type delegate instance, 
+// and there's no return value of the invocation of this lambda expression.
+
+//--------------------------------------------------------------------------------------------------------------------------
