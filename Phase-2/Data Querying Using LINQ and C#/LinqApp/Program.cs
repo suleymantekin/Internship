@@ -98,14 +98,37 @@ namespace LinqApp
             // The OrderBy Operator
             // Sorts values in ascending order
 
+            // var records = DataLoader.Load(@"./");
+            // var sortedByRank = records.OrderBy(r => r.Rank);
+            // // The corresponding query expression (SQL-like) syntax
+            // // var sortedByRank = from r in records orderby r.Rank select r;
+            // foreach (var r in sortedByRank)
+            // {
+            //     System.Console.WriteLine(r.ToString());
+            // }
+
+            //----------------------------------------------------------------------------
+            // The OrderByDescending Operator
+            // Sorts values in descending order
+
             var records = DataLoader.Load(@"./");
-            var sortedByRank = records.OrderBy(r => r.Rank);
+            var sortedByRank = records.OrderByDescending(r => r.Rank);
             // The corresponding query expression (SQL-like) syntax
-            // var sortedByRank = from r in records orderby r.Rank select r;
+            // var sortedByRank = from r in records orderby r.Rank descending select r;
             foreach (var r in sortedByRank)
             {
                 System.Console.WriteLine(r.ToString());
             }
+
+            /*
+                Note:
+                Some of the .NET built-in collections has their own Sort and Reverse member methods. 
+                The difference between the member methods and the LINQ methods is the member methods 
+                will perform the sorting on the collection, thus the element sequence of the collection 
+                will be physically changed. While the LINQ method will generate a new result collection
+                which is sorted, the source collection keeps its original element sequence.
+             */
+
         }
     }
 }
