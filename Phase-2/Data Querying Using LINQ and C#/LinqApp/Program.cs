@@ -111,14 +111,14 @@ namespace LinqApp
             // The OrderByDescending Operator
             // Sorts values in descending order
 
-            var records = DataLoader.Load(@"./");
-            var sortedByRank = records.OrderByDescending(r => r.Rank);
-            // The corresponding query expression (SQL-like) syntax
-            // var sortedByRank = from r in records orderby r.Rank descending select r;
-            foreach (var r in sortedByRank)
-            {
-                System.Console.WriteLine(r.ToString());
-            }
+            // var records = DataLoader.Load(@"./");
+            // var sortedByRank = records.OrderByDescending(r => r.Rank);
+            // // The corresponding query expression (SQL-like) syntax
+            // // var sortedByRank = from r in records orderby r.Rank descending select r;
+            // foreach (var r in sortedByRank)
+            // {
+            //     System.Console.WriteLine(r.ToString());
+            // }
 
             /*
                 Note:
@@ -129,6 +129,18 @@ namespace LinqApp
                 which is sorted, the source collection keeps its original element sequence.
              */
 
+            //----------------------------------------------------------------------------
+            // The ThenBy Operator
+            // Performs a secondary sort in ascending order.
+
+            var records = DataLoader.Load(@"./");
+            var sortedByRank = records.OrderBy(r => r.Rank).ThenBy(r => r.Name);
+            // The corresponding query expression (SQL-like) syntax
+            // var sortedByRank = from r in records orderby r.Rank, r.Name select r;
+            foreach (var r in sortedByRank)
+            {
+                System.Console.WriteLine(r.ToString());
+            }
         }
     }
 }
