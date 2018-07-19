@@ -32,10 +32,21 @@ namespace LinqApp
 
             //----------------------------------------------------------------------------
             // The All Operator
+            // The All operator determines whether all the elements in a collection satisfy a condition.
             // All operators does not have query expression (SQL-like) syntax.
 
+            // var records = DataLoader.Load(@"./");
+            // var result = records.All(r => r.Name.Length > 3);
+            // System.Console.WriteLine(result);
+
+            //----------------------------------------------------------------------------
+            // The Any Operator
+            // Any operator determines whether there is at least one element 
+            // in the source collection that satisfies the condition.
+            // Any operators does not have query expression (SQL-like) syntax.
+
             var records = DataLoader.Load(@"./");
-            var result = records.All(r => r.Name.Length > 3);
+            var result = records.Any(r => r.Name.Length > 15);
             System.Console.WriteLine(result);
         }
     }
