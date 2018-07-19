@@ -68,18 +68,31 @@ namespace LinqApp
             // Union - Returns the set union, which means unique elements that appear in either of two collections
             // All these four operators do not have query expression(SQL - like) keywords.
 
-            int[] left = { 1, 1, 2, 3, 3, 4, 4 };
-            int[] right = { 3, 4, 5, 6 };
+            // int[] left = { 1, 1, 2, 3, 3, 4, 4 };
+            // int[] right = { 3, 4, 5, 6 };
 
-            var distinctResult = left.Distinct();
-            var intersectResult = left.Intersect(right);
-            var exceptResult = left.Except(right);
-            var unionResult = left.Union(right);
+            // var distinctResult = left.Distinct();
+            // var intersectResult = left.Intersect(right);
+            // var exceptResult = left.Except(right);
+            // var unionResult = left.Union(right);
 
-            Console.WriteLine($"Distinct: {string.Join(",", distinctResult)}"); // 1, 2, 3, 4
-            Console.WriteLine($"Intersect: {string.Join(",", intersectResult)}"); // 3, 4
-            Console.WriteLine($"Except: {string.Join(",", exceptResult)}"); // 1, 2
-            Console.WriteLine($"Union: {string.Join(",", unionResult)}"); // 1, 2, 3, 4, 5, 6
+            // Console.WriteLine($"Distinct: {string.Join(",", distinctResult)}"); // 1, 2, 3, 4
+            // Console.WriteLine($"Intersect: {string.Join(",", intersectResult)}"); // 3, 4
+            // Console.WriteLine($"Except: {string.Join(",", exceptResult)}"); // 1, 2
+            // Console.WriteLine($"Union: {string.Join(",", unionResult)}"); // 1, 2, 3, 4, 5, 6
+
+            //----------------------------------------------------------------------------
+            // The Concat Operator
+            // Concatenation refers to the operation of appending one collection to another
+
+            int[] array1 = { 1, 2, 3, 4, 5 };
+            int[] array2 = { 3, 4, 5, 6, 7 };
+
+            var concatResult = array1.Concat(array2); // 1,2,3,4,5,3,4,5,6,7
+            var unionResult = array1.Union(array2); // 1,2,3,4,5,6,7
+
+            System.Console.WriteLine($"Concat: {string.Join(",", concatResult)}");
+            System.Console.WriteLine($"Union: {string.Join(",", unionResult)}");
         }
     }
 }
