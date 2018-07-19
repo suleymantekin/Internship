@@ -85,14 +85,27 @@ namespace LinqApp
             // The Concat Operator
             // Concatenation refers to the operation of appending one collection to another
 
-            int[] array1 = { 1, 2, 3, 4, 5 };
-            int[] array2 = { 3, 4, 5, 6, 7 };
+            // int[] array1 = { 1, 2, 3, 4, 5 };
+            // int[] array2 = { 3, 4, 5, 6, 7 };
 
-            var concatResult = array1.Concat(array2); // 1,2,3,4,5,3,4,5,6,7
-            var unionResult = array1.Union(array2); // 1,2,3,4,5,6,7
+            // var concatResult = array1.Concat(array2); // 1,2,3,4,5,3,4,5,6,7
+            // var unionResult = array1.Union(array2); // 1,2,3,4,5,6,7
 
-            System.Console.WriteLine($"Concat: {string.Join(",", concatResult)}");
-            System.Console.WriteLine($"Union: {string.Join(",", unionResult)}");
+            // System.Console.WriteLine($"Concat: {string.Join(",", concatResult)}");
+            // System.Console.WriteLine($"Union: {string.Join(",", unionResult)}");
+
+            //----------------------------------------------------------------------------
+            // The OrderBy Operator
+            // Sorts values in ascending order
+
+            var records = DataLoader.Load(@"./");
+            var sortedByRank = records.OrderBy(r => r.Rank);
+            // The corresponding query expression (SQL-like) syntax
+            // var sortedByRank = from r in records orderby r.Rank select r;
+            foreach (var r in sortedByRank)
+            {
+                System.Console.WriteLine(r.ToString());
+            }
         }
     }
 }
