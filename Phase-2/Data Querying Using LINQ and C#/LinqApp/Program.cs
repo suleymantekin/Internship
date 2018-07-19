@@ -54,12 +54,32 @@ namespace LinqApp
             // The Contains operator determines whether a collection contains a specified element.
             // Any operators does not have query expression (SQL-like) syntax.
 
+            // int[] integers = { 100, 200, 300, 400, 500 };
+            // string[] strings = { "Tim", "Tom", "Rina", "Andrew" };
+            // var result1 = integers.Contains(200);
+            // var result2 = strings.Contains("Tim");
+            // System.Console.WriteLine($"{result1} {result2}");
 
-            int[] integers = { 100, 200, 300, 400, 500 };
-            string[] strings = { "Tim", "Tom", "Rina", "Andrew" };
-            var result1 = integers.Contains(200);
-            var result2 = strings.Contains("Tim");
-            System.Console.WriteLine($"{result1} {result2}");
+            //----------------------------------------------------------------------------
+            // The Set Operators
+            // Distinct - Keeps unique elements of the collection and removes duplicate elements
+            // Intersect - Returns the set intersection, which means elements that appear in each of two collections
+            // Except - Returns the set difference, which means the elements of one collection that do not appear in a second collection
+            // Union - Returns the set union, which means unique elements that appear in either of two collections
+            // All these four operators do not have query expression(SQL - like) keywords.
+
+            int[] left = { 1, 1, 2, 3, 3, 4, 4 };
+            int[] right = { 3, 4, 5, 6 };
+
+            var distinctResult = left.Distinct();
+            var intersectResult = left.Intersect(right);
+            var exceptResult = left.Except(right);
+            var unionResult = left.Union(right);
+
+            Console.WriteLine($"Distinct: {string.Join(",", distinctResult)}"); // 1, 2, 3, 4
+            Console.WriteLine($"Intersect: {string.Join(",", intersectResult)}"); // 3, 4
+            Console.WriteLine($"Except: {string.Join(",", exceptResult)}"); // 1, 2
+            Console.WriteLine($"Union: {string.Join(",", unionResult)}"); // 1, 2, 3, 4, 5, 6
         }
     }
 }
