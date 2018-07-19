@@ -45,9 +45,21 @@ namespace LinqApp
             // in the source collection that satisfies the condition.
             // Any operators does not have query expression (SQL-like) syntax.
 
-            var records = DataLoader.Load(@"./");
-            var result = records.Any(r => r.Name.Length > 15);
-            System.Console.WriteLine(result);
+            // var records = DataLoader.Load(@"./");
+            // var result = records.Any(r => r.Name.Length > 15);
+            // System.Console.WriteLine(result);
+
+            //----------------------------------------------------------------------------
+            // The Contains Operator
+            // The Contains operator determines whether a collection contains a specified element.
+            // Any operators does not have query expression (SQL-like) syntax.
+
+
+            int[] integers = { 100, 200, 300, 400, 500 };
+            string[] strings = { "Tim", "Tom", "Rina", "Andrew" };
+            var result1 = integers.Contains(200);
+            var result2 = strings.Contains("Tim");
+            System.Console.WriteLine($"{result1} {result2}");
         }
     }
 }
