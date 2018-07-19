@@ -21,15 +21,22 @@ namespace LinqApp
             //     System.Console.WriteLine(r);
 
             //----------------------------------------------------------------------------
-
             // The OfType Operator
 
-            var objects = new Object[] { 1, 10L, 1.1, 1.1f, "Hello", 2, 3 };
-            var result = objects.OfType<int>();
-            foreach (var item in result)
-            {
-                System.Console.WriteLine(item);
-            }
+            // var objects = new Object[] { 1, 10L, 1.1, 1.1f, "Hello", 2, 3 };
+            // var result = objects.OfType<int>();
+            // foreach (var item in result)
+            // {
+            //     System.Console.WriteLine(item);
+            // }
+
+            //----------------------------------------------------------------------------
+            // The All Operator
+            // All operators does not have query expression (SQL-like) syntax.
+
+            var records = DataLoader.Load(@"./");
+            var result = records.All(r => r.Name.Length > 3);
+            System.Console.WriteLine(result);
         }
     }
 }
