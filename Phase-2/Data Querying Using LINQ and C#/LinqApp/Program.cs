@@ -146,14 +146,23 @@ namespace LinqApp
             // The ThenByDescending operator
             // Performs a secondary sort in descending order
 
-            var records = DataLoader.Load(@"./");
-            var sortedByRank = records.OrderBy(r => r.Rank).ThenByDescending(r => r.Name);
-            // The corresponding query expression (SQL-like) syntax
-            // var sortedByRank = from r in records orderby r.Rank, r.Name descending select r;
-            foreach (var r in sortedByRank)
-            {
-                System.Console.WriteLine(r.ToString());
-            }
+            // var records = DataLoader.Load(@"./");
+            // var sortedByRank = records.OrderBy(r => r.Rank).ThenByDescending(r => r.Name);
+            // // The corresponding query expression (SQL-like) syntax
+            // // var sortedByRank = from r in records orderby r.Rank, r.Name descending select r;
+            // foreach (var r in sortedByRank)
+            // {
+            //     System.Console.WriteLine(r.ToString());
+            // }
+
+            //----------------------------------------------------------------------------
+            // The Reverse Operator
+            // Reverses the order of the elements in a collection
+
+            int[] original = { 1979, 10, 31, 8, 15 };
+            var reversed = original.Reverse();
+            System.Console.WriteLine($"Original: {string.Join(",", original)}");
+            System.Console.WriteLine($"Reversed: {string.Join(",", reversed)}");
         }
     }
 }
