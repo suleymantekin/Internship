@@ -163,6 +163,17 @@ namespace LinqApp
             var reversed = original.Reverse();
             System.Console.WriteLine($"Original: {string.Join(",", original)}");
             System.Console.WriteLine($"Reversed: {string.Join(",", reversed)}");
+
+            //----------------------------------------------------------------------------
+            // The Select Operator
+            // Projects values that are based on a transform function.
+
+            var records = DataLoader.Load(@"./");
+            var names = records.Select(r => r.Name);
+            foreach (var n in names)
+            {
+                System.Console.WriteLine(n);
+            }
         }
     }
 }
