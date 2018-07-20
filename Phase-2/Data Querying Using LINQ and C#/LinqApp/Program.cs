@@ -168,19 +168,30 @@ namespace LinqApp
             // The Select Operator
             // Projects values that are based on a transform function.
 
-            var records = DataLoader.Load(@"./");
-            // var names = records.Select(r => r.Name);
+            // var records = DataLoader.Load(@"./");
+            // // var names = records.Select(r => r.Name);
             // // Using the query expression (SQL-like) syntax, the code will be:
             // // var names = from r in records select r.Name;
 
             // // Select Multiple Element Property Values
-            var items = records.Select(r => new { Rank = r.Rank, Name = r.Name });
+            // var items = records.Select(r => new { Rank = r.Rank, Name = r.Name });
             // // Using the query expression (SQL-like) syntax, the code will be:
-            // // var items = from r in records select new RankAndName { Rank = r.Rank, Name = r.Name };
-            foreach (var n in items)
-            {
-                System.Console.WriteLine(n);
-            }
+            // // var items = from r in records select new { Rank = r.Rank, Name = r.Name };
+            // foreach (var n in items)
+            // {
+            //     System.Console.WriteLine(n);
+            // }
+
+            // When using ValueTuple, the code will be:
+            // var records = DataLoader.Load(@"./");
+            // var items = records.Select(r => (r.Rank, r.Name));
+            // // query expression (SQL-like) syntax version of this code is:
+            // // var items = from r in records select (r.Rank, r.Name);
+            // foreach (var item in items)
+            // {
+            //     // System.Console.WriteLine(item.GetType());
+            //     System.Console.WriteLine($"Rank:{item.Rank} Name:{item.Name}");
+            // }
 
             //----------------------------------------------------------------------------
             // 
