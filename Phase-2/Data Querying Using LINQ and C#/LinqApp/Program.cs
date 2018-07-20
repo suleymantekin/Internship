@@ -194,7 +194,39 @@ namespace LinqApp
             // }
 
             //----------------------------------------------------------------------------
-            // 
+            // The SelectMany Operator
+            // Projects sequences of values that are based on a transform function and then flattens them into one sequence.
+
+            // Prepare the data
+            var records = DataLoader.Load(@"./");
+            var dict = new Dictionary<string, IEnumerable<Record>>();
+            dict["FemaleTop5"] = records.Where(r => r.Rank <= 5 && r.Gender == Gender.Female);
+            dict["MaleTop5"] = records.Where(r => r.Rank <= 5 && r.Gender == Gender.Male);
+
+            // Solution 1:
+            var names1 = new List<string>();
+            var selectResult = dict.Select(kvp => kvp.Value);
+            foreach (var c in selectResult)
+            {
+                foreach (var r in c)
+                {
+                    names1.Add(r.Name);
+                }
+            }
+
+            // Solution 2:
+            var names2 = new List<string>();
+            var selectManyResult = dict.SelectMany(kvp => kvp.Value);
+            foreach (var r in selectManyResult)
+            {
+                names2.Add(r.Name);
+            }
+
+            // Solution 3:
+            var names3 =
+                from kvp in dict
+                from r in kvp.Value
+                select r.Name;
 
 
 
