@@ -159,21 +159,34 @@ namespace LinqApp
             // The Reverse Operator
             // Reverses the order of the elements in a collection
 
-            int[] original = { 1979, 10, 31, 8, 15 };
-            var reversed = original.Reverse();
-            System.Console.WriteLine($"Original: {string.Join(",", original)}");
-            System.Console.WriteLine($"Reversed: {string.Join(",", reversed)}");
+            // int[] original = { 1979, 10, 31, 8, 15 };
+            // var reversed = original.Reverse();
+            // System.Console.WriteLine($"Original: {string.Join(",", original)}");
+            // System.Console.WriteLine($"Reversed: {string.Join(",", reversed)}");
 
             //----------------------------------------------------------------------------
             // The Select Operator
             // Projects values that are based on a transform function.
 
             var records = DataLoader.Load(@"./");
-            var names = records.Select(r => r.Name);
-            foreach (var n in names)
+            // var names = records.Select(r => r.Name);
+            // // Using the query expression (SQL-like) syntax, the code will be:
+            // // var names = from r in records select r.Name;
+
+            // // Select Multiple Element Property Values
+            var items = records.Select(r => new { Rank = r.Rank, Name = r.Name });
+            // // Using the query expression (SQL-like) syntax, the code will be:
+            // // var items = from r in records select new RankAndName { Rank = r.Rank, Name = r.Name };
+            foreach (var n in items)
             {
                 System.Console.WriteLine(n);
             }
+
+            //----------------------------------------------------------------------------
+            // 
+
+
+
         }
     }
 }
