@@ -1,0 +1,11 @@
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_SingleElementOperations/obj/Debug/netcoreapp2.1/Mod2_SingleElementOperations.csprojAssemblyReference.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_SingleElementOperations/obj/Debug/netcoreapp2.1/Mod2_SingleElementOperations.csproj.CoreCompileInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_SingleElementOperations/obj/Debug/netcoreapp2.1/Mod2_SingleElementOperations.AssemblyInfoInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_SingleElementOperations/obj/Debug/netcoreapp2.1/Mod2_SingleElementOperations.AssemblyInfo.cs
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_SingleElementOperations/bin/Debug/netcoreapp2.1/Mod2_SingleElementOperations.deps.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_SingleElementOperations/bin/Debug/netcoreapp2.1/Mod2_SingleElementOperations.runtimeconfig.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_SingleElementOperations/bin/Debug/netcoreapp2.1/Mod2_SingleElementOperations.runtimeconfig.dev.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_SingleElementOperations/bin/Debug/netcoreapp2.1/Mod2_SingleElementOperations.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_SingleElementOperations/bin/Debug/netcoreapp2.1/Mod2_SingleElementOperations.pdb
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_SingleElementOperations/obj/Debug/netcoreapp2.1/Mod2_SingleElementOperations.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_SingleElementOperations/obj/Debug/netcoreapp2.1/Mod2_SingleElementOperations.pdb
