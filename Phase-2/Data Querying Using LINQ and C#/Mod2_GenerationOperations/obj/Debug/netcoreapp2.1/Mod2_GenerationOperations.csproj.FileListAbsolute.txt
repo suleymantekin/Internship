@@ -1,0 +1,11 @@
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_GenerationOperations/bin/Debug/netcoreapp2.1/Mod2_GenerationOperations.deps.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_GenerationOperations/bin/Debug/netcoreapp2.1/Mod2_GenerationOperations.runtimeconfig.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_GenerationOperations/bin/Debug/netcoreapp2.1/Mod2_GenerationOperations.runtimeconfig.dev.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_GenerationOperations/bin/Debug/netcoreapp2.1/Mod2_GenerationOperations.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_GenerationOperations/bin/Debug/netcoreapp2.1/Mod2_GenerationOperations.pdb
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_GenerationOperations/obj/Debug/netcoreapp2.1/Mod2_GenerationOperations.csprojAssemblyReference.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_GenerationOperations/obj/Debug/netcoreapp2.1/Mod2_GenerationOperations.csproj.CoreCompileInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_GenerationOperations/obj/Debug/netcoreapp2.1/Mod2_GenerationOperations.AssemblyInfoInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_GenerationOperations/obj/Debug/netcoreapp2.1/Mod2_GenerationOperations.AssemblyInfo.cs
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_GenerationOperations/obj/Debug/netcoreapp2.1/Mod2_GenerationOperations.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_GenerationOperations/obj/Debug/netcoreapp2.1/Mod2_GenerationOperations.pdb

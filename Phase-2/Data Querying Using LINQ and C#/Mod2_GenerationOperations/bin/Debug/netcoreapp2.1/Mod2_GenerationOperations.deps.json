@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "Mod2_GenerationOperations/1.0.0": {
+        "runtime": {
+          "Mod2_GenerationOperations.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Mod2_GenerationOperations/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
