@@ -1,0 +1,11 @@
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_PartitioningOperations/bin/Debug/netcoreapp2.1/Mod2_PartitioningOperations.deps.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_PartitioningOperations/bin/Debug/netcoreapp2.1/Mod2_PartitioningOperations.runtimeconfig.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_PartitioningOperations/bin/Debug/netcoreapp2.1/Mod2_PartitioningOperations.runtimeconfig.dev.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_PartitioningOperations/bin/Debug/netcoreapp2.1/Mod2_PartitioningOperations.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_PartitioningOperations/bin/Debug/netcoreapp2.1/Mod2_PartitioningOperations.pdb
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_PartitioningOperations/obj/Debug/netcoreapp2.1/Mod2_PartitioningOperations.csprojAssemblyReference.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_PartitioningOperations/obj/Debug/netcoreapp2.1/Mod2_PartitioningOperations.csproj.CoreCompileInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_PartitioningOperations/obj/Debug/netcoreapp2.1/Mod2_PartitioningOperations.AssemblyInfoInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_PartitioningOperations/obj/Debug/netcoreapp2.1/Mod2_PartitioningOperations.AssemblyInfo.cs
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_PartitioningOperations/obj/Debug/netcoreapp2.1/Mod2_PartitioningOperations.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_PartitioningOperations/obj/Debug/netcoreapp2.1/Mod2_PartitioningOperations.pdb
