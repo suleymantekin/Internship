@@ -1,0 +1,11 @@
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_EqualityOperations/bin/Debug/netcoreapp2.1/Mod2_EqualityOperations.deps.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_EqualityOperations/bin/Debug/netcoreapp2.1/Mod2_EqualityOperations.runtimeconfig.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_EqualityOperations/bin/Debug/netcoreapp2.1/Mod2_EqualityOperations.runtimeconfig.dev.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_EqualityOperations/bin/Debug/netcoreapp2.1/Mod2_EqualityOperations.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_EqualityOperations/bin/Debug/netcoreapp2.1/Mod2_EqualityOperations.pdb
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_EqualityOperations/obj/Debug/netcoreapp2.1/Mod2_EqualityOperations.csprojAssemblyReference.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_EqualityOperations/obj/Debug/netcoreapp2.1/Mod2_EqualityOperations.csproj.CoreCompileInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_EqualityOperations/obj/Debug/netcoreapp2.1/Mod2_EqualityOperations.AssemblyInfoInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_EqualityOperations/obj/Debug/netcoreapp2.1/Mod2_EqualityOperations.AssemblyInfo.cs
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_EqualityOperations/obj/Debug/netcoreapp2.1/Mod2_EqualityOperations.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_EqualityOperations/obj/Debug/netcoreapp2.1/Mod2_EqualityOperations.pdb
