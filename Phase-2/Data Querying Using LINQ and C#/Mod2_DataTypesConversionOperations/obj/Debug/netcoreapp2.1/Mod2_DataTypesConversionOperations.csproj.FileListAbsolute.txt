@@ -1,0 +1,11 @@
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_DataTypesConversionOperations/obj/Debug/netcoreapp2.1/Mod2_DataTypesConversionOperations.csprojAssemblyReference.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_DataTypesConversionOperations/obj/Debug/netcoreapp2.1/Mod2_DataTypesConversionOperations.csproj.CoreCompileInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_DataTypesConversionOperations/obj/Debug/netcoreapp2.1/Mod2_DataTypesConversionOperations.AssemblyInfoInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_DataTypesConversionOperations/obj/Debug/netcoreapp2.1/Mod2_DataTypesConversionOperations.AssemblyInfo.cs
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_DataTypesConversionOperations/bin/Debug/netcoreapp2.1/Mod2_DataTypesConversionOperations.deps.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_DataTypesConversionOperations/bin/Debug/netcoreapp2.1/Mod2_DataTypesConversionOperations.runtimeconfig.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_DataTypesConversionOperations/bin/Debug/netcoreapp2.1/Mod2_DataTypesConversionOperations.runtimeconfig.dev.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_DataTypesConversionOperations/bin/Debug/netcoreapp2.1/Mod2_DataTypesConversionOperations.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_DataTypesConversionOperations/bin/Debug/netcoreapp2.1/Mod2_DataTypesConversionOperations.pdb
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_DataTypesConversionOperations/obj/Debug/netcoreapp2.1/Mod2_DataTypesConversionOperations.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod2_DataTypesConversionOperations/obj/Debug/netcoreapp2.1/Mod2_DataTypesConversionOperations.pdb
