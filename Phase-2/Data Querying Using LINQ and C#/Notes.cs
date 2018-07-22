@@ -229,3 +229,53 @@ class Program {
 // and there's no return value of the invocation of this lambda expression.
 
 //--------------------------------------------------------------------------------------------------------------------------
+// Module 3
+// Deferred Execution
+
+using System;
+using System.Linq;
+
+namespace DeferredExecution {
+    class Program {
+        static void Main(string[] args) {
+            int[] nums = { 0, 1, 2, 3, 4, 5 };
+            var odds = nums.Where(n => n % 2 == 1);
+            foreach (var odd in odds) {
+                System.Console.WriteLine(odd);
+            }
+        }
+    }
+}
+
+// The query nums.Where(n => n % 2 == 1) will not execute until we iterate it with the foreach loop. 
+// In another word, if we delete the foreach loop, the query will never execute. 
+// Please note, the iteration to a LINQ query result is not limited to for or foreach loops, 
+// any operation trying to read values from the query result will trigger the execution of the query. 
+// For example, if replacing the foreach loop with code line var output = string.Join(",", odds);, 
+// the query will execute when this line executes. This concept is referred to as deferred execution.
+
+
+// Immediate Execution
+// Queries that perform aggregation functions over a range of source elements must first iterate over those elements. 
+// Examples of such queries are Count, Max, Average, and First. These execute without an explicit 
+// foreach statement because the query itself must use foreach in order to return a result.]
+// Note also that these types of queries return a single value, not an IEnumerable collection.
+
+//Forcing Immediate Execution
+// To force immediate execution of any deferred execution query, you can call the ToList or ToArray methods. 
+// That means if we modify the code of the last code example to:
+
+using System;
+using System.Linq;
+
+namespace DeferredExecution {
+    class Program {
+        static void Main(string[] args) {
+            int[] nums = { 0, 1, 2, 3, 4, 5 };
+            var odds = nums.Where(n => n % 2 == 1).ToList(); // or .ToArray();
+            foreach (var odd in odds) {
+                System.Console.WriteLine(odd);
+            }
+        }
+    }
+}
