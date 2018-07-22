@@ -35,8 +35,18 @@ namespace Mod3_Lab1_WorldApp
             // The All Operator
             // Print whether all cities' population are greater than 1000
 
-            var result = dbContext.City.All(c => c.Population > 1000);
-            Console.WriteLine(result);
+            // var result = dbContext.City.All(c => c.Population > 1000);
+            // Console.WriteLine(result);
+
+            //--------------------------------------------------------------------------------------------------------------------------
+            // The Any Operator
+            // Is there any continent data stored in the database?
+            // Is there any city with a population that is greater than 10 million ?
+
+            var r1 = dbContext.Continent.Any();
+            var r2 = dbContext.City.Any(c => c.Population > 10000000);
+            Console.WriteLine(r1);
+            Console.WriteLine(r2);
         }
     }
 }
