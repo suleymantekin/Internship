@@ -21,13 +21,22 @@ namespace Mod3_Lab1_WorldApp
 
             //--------------------------------------------------------------------------------------------------------------------------
             // The Where Operator
+            // Find out the countries with a population greater than 100 million
 
-            var countries = dbContext.Country
-                .Where(c => c.Population >= 100000000);
-            foreach (var c in countries)
-            {
-                Console.WriteLine($"{c.Name} => {c.Population}");
-            }
+            // var countries = dbContext.Country
+            //     .Where(c => c.Population >= 100000000);
+            // // var countries = from c in dbContext.Country where c.Population > 100000000 select c;
+            // foreach (var c in countries)
+            // {
+            //     Console.WriteLine($"{c.Name} => {c.Population}");
+            // }
+
+            //--------------------------------------------------------------------------------------------------------------------------
+            // The All Operator
+            // Print whether all cities' population are greater than 1000
+
+            var result = dbContext.City.All(c => c.Population > 1000);
+            Console.WriteLine(result);
         }
     }
 }
