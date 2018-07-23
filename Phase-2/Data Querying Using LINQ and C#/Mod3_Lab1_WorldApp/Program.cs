@@ -73,14 +73,27 @@ namespace Mod3_Lab1_WorldApp
             // The Select Operator
             // Could you list the name of countries with a population greater than 1 billion?
 
-            var names = dbContext.Country
-                  .Where(c => c.Population > 100000000)
-                  .Select(c => c.Name);
+            // var names = dbContext.Country
+            //       .Where(c => c.Population > 100000000)
+            //       .Select(c => c.Name);
+            // foreach (var n in names)
+            // {
+            //     System.Console.WriteLine(n);
+            // }
+
+            //--------------------------------------------------------------------------------------------------------------------------
+            // The SelectMany Operator
+            // Could you list the name of counties in North America and South America?
+
+            var names = dbContext.Continent
+                  .Include(nameof(Continent.Country))
+                  .Where(c => c.Name == "North America" || c.Name == "South America")
+                  .SelectMany(c => c.Country).Select(c => c.Name);
+
             foreach (var n in names)
             {
                 System.Console.WriteLine(n);
             }
-
         }
     }
 
