@@ -167,14 +167,48 @@ namespace Mod3_Lab1_WorldApp
             // the smallest surface area
             // the third largest surface area
 
-            var sorted = dbContext.Country.OrderByDescending(c => c.SurfaceArea).ToList();
-            var largest = sorted.First();
-            var thirdLarget = sorted.ElementAt(2);
-            var smallest = sorted.Last();
+            // var sorted = dbContext.Country.OrderByDescending(c => c.SurfaceArea).ToList();
+            // var largest = sorted.First();
+            // var thirdLarget = sorted.ElementAt(2);
+            // var smallest = sorted.Last();
 
-            Console.WriteLine($"Largest: {largest.Name} {largest.SurfaceArea}");
-            Console.WriteLine($"Third: {thirdLarget.Name} {thirdLarget.SurfaceArea}");
-            Console.WriteLine($"Smallest: {smallest.Name} {smallest.SurfaceArea}");
+            // Console.WriteLine($"Largest: {largest.Name} {largest.SurfaceArea}");
+            // Console.WriteLine($"Third: {thirdLarget.Name} {thirdLarget.SurfaceArea}");
+            // Console.WriteLine($"Smallest: {smallest.Name} {smallest.SurfaceArea}");
+
+            //--------------------------------------------------------------------------------------------------------------------------
+            // The Single and SingleOrDefault Operator
+            // Could you find out whether there is a city called: Seattle Kirkland Clara
+
+            try
+            {
+                var seattle = dbContext.City.Single(c => c.Name == "Seattle");
+                Console.WriteLine($"There is a city called Seattle.");
+            }
+            catch
+            {
+                Console.WriteLine($"There maybe zero or more than one Seattle.");
+            }
+
+            try
+            {
+                var foundOneKirkland = dbContext.City.Single(c => c.Name == "Kirkland");
+                Console.WriteLine($"There is a city called Kirkland.");
+            }
+            catch
+            {
+                Console.WriteLine($"There maybe zero or more than one Kirkland.");
+            }
+
+            try
+            {
+                var foundOneSantaClara = dbContext.City.Single(c => c.Name == "Santa Clara");
+                Console.WriteLine($"There is a city called Santa Clara.");
+            }
+            catch
+            {
+                Console.WriteLine($"There maybe zero or more than one Santa Clara.");
+            }
         }
     }
 
