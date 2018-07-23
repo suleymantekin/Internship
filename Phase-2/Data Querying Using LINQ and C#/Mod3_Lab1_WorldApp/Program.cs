@@ -62,11 +62,23 @@ namespace Mod3_Lab1_WorldApp
             //--------------------------------------------------------------------------------------------------------------------------
             // Include Extension Method
 
-            var continents = dbContext.Continent
-                .Include(nameof(Continent.Country));
-            foreach (var c in continents)
+            // var continents = dbContext.Continent
+            //     .Include(nameof(Continent.Country));
+            // foreach (var c in continents)
+            // {
+            //     Console.WriteLine($"{c.Name.PadRight(16)} {c.Country.Count}");
+            // }
+
+            //--------------------------------------------------------------------------------------------------------------------------
+            // The Select Operator
+            // Could you list the name of countries with a population greater than 1 billion?
+
+            var names = dbContext.Country
+                  .Where(c => c.Population > 100000000)
+                  .Select(c => c.Name);
+            foreach (var n in names)
             {
-                Console.WriteLine($"{c.Name.PadRight(16)} {c.Country.Count}");
+                System.Console.WriteLine(n);
             }
 
         }
