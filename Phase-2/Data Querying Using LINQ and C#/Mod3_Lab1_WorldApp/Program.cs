@@ -146,19 +146,35 @@ namespace Mod3_Lab1_WorldApp
             // The OrderBy and ThenByDescending Operator
             // Could you sort all counties by its continent, and then sort the counties in the same continent by population in the descending order?
 
-            var countries = dbContext.Country
-            .Include(nameof(Country.Continent))
-            .OrderBy(c => c.Continent.Name)
-            .ThenByDescending(c => c.Population);
-            // var countries =
-            //     from c in dbContext.Country.Include(nameof(Country.Continent))
-            //     orderby c.Continent.Name, c.Population descending
-            //     select c;
+            // var countries = dbContext.Country
+            // .Include(nameof(Country.Continent))
+            // .OrderBy(c => c.Continent.Name)
+            // .ThenByDescending(c => c.Population);
+            // // var countries =
+            // //     from c in dbContext.Country.Include(nameof(Country.Continent))
+            // //     orderby c.Continent.Name, c.Population descending
+            // //     select c;
 
-            foreach (var c in countries)
-            {
-                Console.WriteLine($"{c.Continent.Name} {c.Name} {c.Population}");
-            }
+            // foreach (var c in countries)
+            // {
+            //     Console.WriteLine($"{c.Continent.Name} {c.Name} {c.Population}");
+            // }
+
+            //--------------------------------------------------------------------------------------------------------------------------
+            // The First, Last, and ElementAt Operator
+            // Could you find out the country that has:
+            // the largest surface area
+            // the smallest surface area
+            // the third largest surface area
+
+            var sorted = dbContext.Country.OrderByDescending(c => c.SurfaceArea).ToList();
+            var largest = sorted.First();
+            var thirdLarget = sorted.ElementAt(2);
+            var smallest = sorted.Last();
+
+            Console.WriteLine($"Largest: {largest.Name} {largest.SurfaceArea}");
+            Console.WriteLine($"Third: {thirdLarget.Name} {thirdLarget.SurfaceArea}");
+            Console.WriteLine($"Smallest: {smallest.Name} {smallest.SurfaceArea}");
         }
     }
 
