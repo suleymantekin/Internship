@@ -209,6 +209,39 @@ namespace Mod3_Lab1_WorldApp
             {
                 Console.WriteLine($"There maybe zero or more than one Santa Clara.");
             }
+
+            //--------------------------------------------------------------------------------------------------------------------------
+            // The Skip and Take Operator
+            // Given the countries sorted by their surface area in a descending order, could you find out the:
+            // largest five countries
+            // countries in the 21st to 25th place
+            // smallest five countries
+
+            var sorted = dbContext.Country.OrderByDescending(c => c.SurfaceArea);
+            var largest5 = sorted.Take(5);
+            var the21to25 = sorted.Skip(20).Take(5);
+            var smallest5 = sorted.ToList().TakeLast(5);
+
+            Console.WriteLine("[Largest 5]");
+            foreach (var c in largest5)
+            {
+                Console.WriteLine($"{c.Name} {c.SurfaceArea}");
+            }
+
+            Console.WriteLine("===================");
+            Console.WriteLine("[Largest 21 to 25]");
+            foreach (var c in the21to25)
+            {
+                Console.WriteLine($"{c.Name} {c.SurfaceArea}");
+            }
+
+            Console.WriteLine("===================");
+            Console.WriteLine("[Smallest 5]");
+            foreach (var c in smallest5)
+            {
+                Console.WriteLine($"{c.Name} {c.SurfaceArea}");
+            }
+
         }
     }
 
