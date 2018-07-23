@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Mod3_Lab1_WorldApp.Models;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Mod3_Lab1_WorldApp
 {
@@ -53,10 +54,21 @@ namespace Mod3_Lab1_WorldApp
             // The Contains Operator
             // Find out whether a given city is in the database
 
-            var seattle = new City { Name = "Seattle", District = "Washington" };
-            var result = dbContext.City.ToList()
-                .Contains(seattle, new CityEqualityComparer());
-            System.Console.WriteLine(result);
+            // var seattle = new City { Name = "Seattle", District = "Washington" };
+            // var result = dbContext.City.ToList()
+            //     .Contains(seattle, new CityEqualityComparer());
+            // System.Console.WriteLine(result);
+
+            //--------------------------------------------------------------------------------------------------------------------------
+            // Include Extension Method
+
+            var continents = dbContext.Continent
+                .Include(nameof(Continent.Country));
+            foreach (var c in continents)
+            {
+                Console.WriteLine($"{c.Name.PadRight(16)} {c.Country.Count}");
+            }
+
         }
     }
 
