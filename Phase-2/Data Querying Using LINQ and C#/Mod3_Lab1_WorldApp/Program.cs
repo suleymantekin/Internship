@@ -101,33 +101,45 @@ namespace Mod3_Lab1_WorldApp
             // Countries that have both large area and large population.
             // Countries that have a large area but not a large population.
 
-            var bigArea = dbContext.Country
-                .OrderByDescending(c => c.SurfaceArea).Take(10);
-            var bigPopulation = dbContext.Country
-                .OrderByDescending(c => c.Population).Take(10);
+            // var bigArea = dbContext.Country
+            //     .OrderByDescending(c => c.SurfaceArea).Take(10);
+            // var bigPopulation = dbContext.Country
+            //     .OrderByDescending(c => c.Population).Take(10);
 
-            var r1 = bigArea.Union(bigPopulation);
-            var r2 = bigArea.Intersect(bigPopulation);
-            var r3 = bigArea.Except(bigPopulation);
+            // var r1 = bigArea.Union(bigPopulation);
+            // var r2 = bigArea.Intersect(bigPopulation);
+            // var r3 = bigArea.Except(bigPopulation);
 
-            Console.WriteLine("[Big Area or Big Population]");
-            foreach (var r in r1)
+            // Console.WriteLine("[Big Area or Big Population]");
+            // foreach (var r in r1)
+            // {
+            //     Console.WriteLine(r.Name);
+            // }
+
+            // Console.WriteLine("========================");
+            // Console.WriteLine("[Big Area and Big Population]");
+            // foreach (var r in r2)
+            // {
+            //     Console.WriteLine(r.Name);
+            // }
+
+            // Console.WriteLine("========================");
+            // Console.WriteLine("[Big Area but Not Big Population]");
+            // foreach (var r in r3)
+            // {
+            //     Console.WriteLine(r.Name);
+            // }
+
+            //--------------------------------------------------------------------------------------------------------------------------
+            // The Distinct Operator
+            // Could you find out the continents that have countries in them? I do not think there are any countries in Antarctica, lets see if this is true.
+
+            var continents = dbContext.Country
+                  .Include(nameof(Country.Continent))
+                  .Select(c => c.Continent).Distinct();
+            foreach (var c in continents)
             {
-                Console.WriteLine(r.Name);
-            }
-
-            Console.WriteLine("========================");
-            Console.WriteLine("[Big Area and Big Population]");
-            foreach (var r in r2)
-            {
-                Console.WriteLine(r.Name);
-            }
-
-            Console.WriteLine("========================");
-            Console.WriteLine("[Big Area but Not Big Population]");
-            foreach (var r in r3)
-            {
-                Console.WriteLine(r.Name);
+                System.Console.WriteLine(c.Name);
             }
         }
     }
