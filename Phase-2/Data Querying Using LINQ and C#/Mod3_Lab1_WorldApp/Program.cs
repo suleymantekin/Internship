@@ -134,12 +134,30 @@ namespace Mod3_Lab1_WorldApp
             // The Distinct Operator
             // Could you find out the continents that have countries in them? I do not think there are any countries in Antarctica, lets see if this is true.
 
-            var continents = dbContext.Country
-                  .Include(nameof(Country.Continent))
-                  .Select(c => c.Continent).Distinct();
-            foreach (var c in continents)
+            // var continents = dbContext.Country
+            //       .Include(nameof(Country.Continent))
+            //       .Select(c => c.Continent).Distinct();
+            // foreach (var c in continents)
+            // {
+            //     System.Console.WriteLine(c.Name);
+            // }
+
+            //--------------------------------------------------------------------------------------------------------------------------
+            // The OrderBy and ThenByDescending Operator
+            // Could you sort all counties by its continent, and then sort the counties in the same continent by population in the descending order?
+
+            var countries = dbContext.Country
+            .Include(nameof(Country.Continent))
+            .OrderBy(c => c.Continent.Name)
+            .ThenByDescending(c => c.Population);
+            // var countries =
+            //     from c in dbContext.Country.Include(nameof(Country.Continent))
+            //     orderby c.Continent.Name, c.Population descending
+            //     select c;
+
+            foreach (var c in countries)
             {
-                System.Console.WriteLine(c.Name);
+                Console.WriteLine($"{c.Continent.Name} {c.Name} {c.Population}");
             }
         }
     }
