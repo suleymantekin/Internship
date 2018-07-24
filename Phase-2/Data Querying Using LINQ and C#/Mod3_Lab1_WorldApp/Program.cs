@@ -304,16 +304,40 @@ namespace Mod3_Lab1_WorldApp
             // The Join Operator
 
 
+            // var continents = dbContext.Continent.OrderBy(c => c.Name);
+            // var countries = dbContext.Country.OrderBy(c => c.Name);
+
+            // var result = continents.Join(countries,
+            // c => c.Id, c => c.ContinentId,
+            // (ctn, ctry) => new { Continent = ctn.Name, Country = ctry.Name });
+            // // var result = from ctn in continents
+            // //              join ctry in countries
+            // //              on ctn.Id equals ctry.ContinentId
+            // //              select new { Continent = ctn.Name, Country = ctry.Name };
+
+            // foreach (var r in result)
+            // {
+            //     Console.WriteLine($"{r.Continent}\t {r.Country}");
+            // }
+
+            //--------------------------------------------------------------------------------------------------------------------------
+            // The GroupJoin Operator
+
             var continents = dbContext.Continent.OrderBy(c => c.Name);
             var countries = dbContext.Country.OrderBy(c => c.Name);
 
-            var result = continents.Join(countries,
-            c => c.Id, c => c.ContinentId,
-            (ctn, ctry) => new { Continent = ctn.Name, Country = ctry.Name });
+            var result = continents.GroupJoin(countries,
+                ctn => ctn.Id, ctry => ctry.ContinentId,
+                (ctn, g) => new { Continent = ctn.Name, CountryCount = g.Count() }
+            );
 
-            foreach (var r in result)
+            // var result = from ctn in continents
+            //              join ctry in countries
+            //              on ctn.Id equals ctry.ContinentId into g
+            //              select new { Continent = ctn.Name, CountryCount = g.Count() };
+            foreach (var item in result)
             {
-                Console.WriteLine($"{r.Continent}\t {r.Country}");
+                Console.WriteLine($"{item.Continent}: {item.CountryCount}");
             }
 
         }
