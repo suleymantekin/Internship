@@ -285,16 +285,35 @@ namespace Mod3_Lab1_WorldApp
             // The GroupBy Operator
             // Could you find the top 3 largest countries of each continent?
 
-            var countries = dbContext.Country
-                .Include(nameof(Country.Continent))
-                .OrderByDescending(c => c.SurfaceArea);
+            // var countries = dbContext.Country
+            //     .Include(nameof(Country.Continent))
+            //     .OrderByDescending(c => c.SurfaceArea);
 
-            var result = countries.GroupBy(c => c.Continent.Name, c => c.Name)
-                .Select(g => $"{g.Key}: {string.Join(",", g.Take(3))}");
+            // var result = countries.GroupBy(c => c.Continent.Name, c => c.Name)
+            //     .Select(g => $"{g.Key}: {string.Join(",", g.Take(3))}");
+            //// var result = from c in countries
+            ////              group c.Name by c.Continent.Name into g
+            ////              select $"{g.Key}: {string.Join(",", g.Take(3))}";
+
+            // foreach (var r in result)
+            // {
+            //     Console.WriteLine(r);
+            // }
+
+            //--------------------------------------------------------------------------------------------------------------------------
+            // The Join Operator
+
+
+            var continents = dbContext.Continent.OrderBy(c => c.Name);
+            var countries = dbContext.Country.OrderBy(c => c.Name);
+
+            var result = continents.Join(countries,
+            c => c.Id, c => c.ContinentId,
+            (ctn, ctry) => new { Continent = ctn.Name, Country = ctry.Name });
 
             foreach (var r in result)
             {
-                Console.WriteLine(r);
+                Console.WriteLine($"{r.Continent}\t {r.Country}");
             }
 
         }
