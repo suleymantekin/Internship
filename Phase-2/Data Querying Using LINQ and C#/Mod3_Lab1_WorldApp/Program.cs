@@ -267,20 +267,35 @@ namespace Mod3_Lab1_WorldApp
             // how many counties in Europe
             // the total population in Europe
 
+            // var countries = dbContext.Country
+            //     .Include(nameof(Country.Continent))
+            //     .Where(c => c.Continent.Name == "Europe");
+
+            // var largest = countries.Max(c => c.SurfaceArea);
+            // var smallest = countries.Min(c => c.SurfaceArea);
+            // var count = countries.Count();
+            // var totalPopulation = countries.Sum(c => c.Population);
+
+            // Console.WriteLine($"Europe Largest Country Area: {largest}");
+            // Console.WriteLine($"Europe Smallest Country Area: {smallest}");
+            // Console.WriteLine($"Europe Country Count: {count}");
+            // Console.WriteLine($"Europe Total Population: {totalPopulation}");
+
+            //--------------------------------------------------------------------------------------------------------------------------
+            // The GroupBy Operator
+            // Could you find the top 3 largest countries of each continent?
+
             var countries = dbContext.Country
                 .Include(nameof(Country.Continent))
-                .Where(c => c.Continent.Name == "Europe");
+                .OrderByDescending(c => c.SurfaceArea);
 
-            var largest = countries.Max(c => c.SurfaceArea);
-            var smallest = countries.Min(c => c.SurfaceArea);
-            var count = countries.Count();
-            var totalPopulation = countries.Sum(c => c.Population);
+            var result = countries.GroupBy(c => c.Continent.Name, c => c.Name)
+                .Select(g => $"{g.Key}: {string.Join(",", g.Take(3))}");
 
-            Console.WriteLine($"Europe Largest Country Area: {largest}");
-            Console.WriteLine($"Europe Smallest Country Area: {smallest}");
-            Console.WriteLine($"Europe Country Count: {count}");
-            Console.WriteLine($"Europe Total Population: {totalPopulation}");
-
+            foreach (var r in result)
+            {
+                Console.WriteLine(r);
+            }
 
         }
     }
