@@ -249,16 +249,38 @@ namespace Mod3_Lab1_WorldApp
             // Generate a dictionary for looking up the population of countries ?
             // Generate a Lookup < K, V > object for looking up country names by continent name ?
 
-            var array = dbContext.Continent.ToArray();
-            var list = dbContext.Continent.ToList();
-            var dict = dbContext.Country.ToDictionary(c => c.Name, c => c.Population);
-            var lookup = dbContext.Country.Include(nameof(Country.Continent))
-                .ToLookup(c => c.Continent.Name, c => c.Name);
+            // var array = dbContext.Continent.ToArray();
+            // var list = dbContext.Continent.ToList();
+            // var dict = dbContext.Country.ToDictionary(c => c.Name, c => c.Population);
+            // var lookup = dbContext.Country.Include(nameof(Country.Continent))
+            //     .ToLookup(c => c.Continent.Name, c => c.Name);
 
-            Console.WriteLine(array.Length);
-            Console.WriteLine(list.Count);
-            Console.WriteLine(dict["China"]);
-            Console.WriteLine(string.Join(",", lookup["Antarctica"]));
+            // Console.WriteLine(array.Length);
+            // Console.WriteLine(list.Count);
+            // Console.WriteLine(dict["China"]);
+            // Console.WriteLine(string.Join(",", lookup["Antarctica"]));
+
+            //--------------------------------------------------------------------------------------------------------------------------
+            // The Max, Min, Count and Sum Operator
+            // Find the largest country area in Europe
+            // the smallest country area in Europe
+            // how many counties in Europe
+            // the total population in Europe
+
+            var countries = dbContext.Country
+                .Include(nameof(Country.Continent))
+                .Where(c => c.Continent.Name == "Europe");
+
+            var largest = countries.Max(c => c.SurfaceArea);
+            var smallest = countries.Min(c => c.SurfaceArea);
+            var count = countries.Count();
+            var totalPopulation = countries.Sum(c => c.Population);
+
+            Console.WriteLine($"Europe Largest Country Area: {largest}");
+            Console.WriteLine($"Europe Smallest Country Area: {smallest}");
+            Console.WriteLine($"Europe Country Count: {count}");
+            Console.WriteLine($"Europe Total Population: {totalPopulation}");
+
 
         }
     }
