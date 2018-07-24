@@ -180,35 +180,35 @@ namespace Mod3_Lab1_WorldApp
             // The Single and SingleOrDefault Operator
             // Could you find out whether there is a city called: Seattle Kirkland Clara
 
-            try
-            {
-                var seattle = dbContext.City.Single(c => c.Name == "Seattle");
-                Console.WriteLine($"There is a city called Seattle.");
-            }
-            catch
-            {
-                Console.WriteLine($"There maybe zero or more than one Seattle.");
-            }
+            // try
+            // {
+            //     var seattle = dbContext.City.Single(c => c.Name == "Seattle");
+            //     Console.WriteLine($"There is a city called Seattle.");
+            // }
+            // catch
+            // {
+            //     Console.WriteLine($"There maybe zero or more than one Seattle.");
+            // }
 
-            try
-            {
-                var foundOneKirkland = dbContext.City.Single(c => c.Name == "Kirkland");
-                Console.WriteLine($"There is a city called Kirkland.");
-            }
-            catch
-            {
-                Console.WriteLine($"There maybe zero or more than one Kirkland.");
-            }
+            // try
+            // {
+            //     var foundOneKirkland = dbContext.City.Single(c => c.Name == "Kirkland");
+            //     Console.WriteLine($"There is a city called Kirkland.");
+            // }
+            // catch
+            // {
+            //     Console.WriteLine($"There maybe zero or more than one Kirkland.");
+            // }
 
-            try
-            {
-                var foundOneSantaClara = dbContext.City.Single(c => c.Name == "Santa Clara");
-                Console.WriteLine($"There is a city called Santa Clara.");
-            }
-            catch
-            {
-                Console.WriteLine($"There maybe zero or more than one Santa Clara.");
-            }
+            // try
+            // {
+            //     var foundOneSantaClara = dbContext.City.Single(c => c.Name == "Santa Clara");
+            //     Console.WriteLine($"There is a city called Santa Clara.");
+            // }
+            // catch
+            // {
+            //     Console.WriteLine($"There maybe zero or more than one Santa Clara.");
+            // }
 
             //--------------------------------------------------------------------------------------------------------------------------
             // The Skip and Take Operator
@@ -217,30 +217,48 @@ namespace Mod3_Lab1_WorldApp
             // countries in the 21st to 25th place
             // smallest five countries
 
-            var sorted = dbContext.Country.OrderByDescending(c => c.SurfaceArea);
-            var largest5 = sorted.Take(5);
-            var the21to25 = sorted.Skip(20).Take(5);
-            var smallest5 = sorted.ToList().TakeLast(5);
+            // var sorted = dbContext.Country.OrderByDescending(c => c.SurfaceArea);
+            // var largest5 = sorted.Take(5);
+            // var the21to25 = sorted.Skip(20).Take(5);
+            // var smallest5 = sorted.ToList().TakeLast(5);
 
-            Console.WriteLine("[Largest 5]");
-            foreach (var c in largest5)
-            {
-                Console.WriteLine($"{c.Name} {c.SurfaceArea}");
-            }
+            // Console.WriteLine("[Largest 5]");
+            // foreach (var c in largest5)
+            // {
+            //     Console.WriteLine($"{c.Name} {c.SurfaceArea}");
+            // }
 
-            Console.WriteLine("===================");
-            Console.WriteLine("[Largest 21 to 25]");
-            foreach (var c in the21to25)
-            {
-                Console.WriteLine($"{c.Name} {c.SurfaceArea}");
-            }
+            // Console.WriteLine("===================");
+            // Console.WriteLine("[Largest 21 to 25]");
+            // foreach (var c in the21to25)
+            // {
+            //     Console.WriteLine($"{c.Name} {c.SurfaceArea}");
+            // }
 
-            Console.WriteLine("===================");
-            Console.WriteLine("[Smallest 5]");
-            foreach (var c in smallest5)
-            {
-                Console.WriteLine($"{c.Name} {c.SurfaceArea}");
-            }
+            // Console.WriteLine("===================");
+            // Console.WriteLine("[Smallest 5]");
+            // foreach (var c in smallest5)
+            // {
+            //     Console.WriteLine($"{c.Name} {c.SurfaceArea}");
+            // }
+
+            //--------------------------------------------------------------------------------------------------------------------------
+            // The ToArray, ToList, ToDictionary, and ToLookup Operator
+            // Retrieve all continents and store them in an array?
+            // Retrieve all continents and store them in a list?
+            // Generate a dictionary for looking up the population of countries ?
+            // Generate a Lookup < K, V > object for looking up country names by continent name ?
+
+            var array = dbContext.Continent.ToArray();
+            var list = dbContext.Continent.ToList();
+            var dict = dbContext.Country.ToDictionary(c => c.Name, c => c.Population);
+            var lookup = dbContext.Country.Include(nameof(Country.Continent))
+                .ToLookup(c => c.Continent.Name, c => c.Name);
+
+            Console.WriteLine(array.Length);
+            Console.WriteLine(list.Count);
+            Console.WriteLine(dict["China"]);
+            Console.WriteLine(string.Join(",", lookup["Antarctica"]));
 
         }
     }
