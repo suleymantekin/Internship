@@ -36,22 +36,45 @@ namespace Mod4_PLinqExample
             // Using Task-Based Parallel Library(TPL)
             // Using PLINQ
 
+            // var source = Enumerable.Range(0, 20).ToList();
+
+            // // TPL version
+            // Parallel.ForEach(source, (item) =>
+            // {
+            //     Console.Write($"{item.ToString().PadLeft(2, '0')}|");
+            // });
+
+            // Console.WriteLine();
+            // Console.WriteLine("======================");
+
+            // // PLINQ version
+            // source.AsParallel().ForAll((item) =>
+            // {
+            //     Console.Write($"{item.ToString().PadLeft(2, '0')}|");
+            // });
+
+            //-----------------------------------------------------------------------
+            // Exception handling in PLinq
+
             var source = Enumerable.Range(0, 20).ToList();
-
-            // TPL version
-            Parallel.ForEach(source, (item) =>
+            try
             {
-                Console.Write($"{item.ToString().PadLeft(2, '0')}|");
-            });
-
-            Console.WriteLine();
-            Console.WriteLine("======================");
-
-            // PLINQ version
-            source.AsParallel().ForAll((item) =>
+                var result = source.AsParallel().Select(n => 10 / n).ToList();
+                foreach (var item in result)
+                {
+                    Console.Write($"{item}|");
+                }
+            }
+            catch (AggregateException e)
             {
-                Console.Write($"{item.ToString().PadLeft(2, '0')}|");
-            });
+                foreach (var item in e.InnerExceptions)
+                {
+                    if (item is DivideByZeroException)
+                    {
+                        Console.WriteLine("Zero cannot be a divisor.");
+                    } // test for other exceptions
+                }
+            }
         }
     }
 }
