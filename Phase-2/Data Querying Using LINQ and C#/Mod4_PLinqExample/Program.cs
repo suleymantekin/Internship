@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Threading;
 
 namespace Mod4_PLinqExample
 {
@@ -56,24 +58,73 @@ namespace Mod4_PLinqExample
             //-----------------------------------------------------------------------
             // Exception handling in PLinq
 
-            var source = Enumerable.Range(0, 20).ToList();
+            // var source = Enumerable.Range(0, 20).ToList();
+            // try
+            // {
+            //     var result = source.AsParallel().Select(n => 10 / n).ToList();
+            //     foreach (var item in result)
+            //     {
+            //         Console.Write($"{item}|");
+            //     }
+            // }
+            // catch (AggregateException e)
+            // {
+            //     foreach (var item in e.InnerExceptions)
+            //     {
+            //         if (item is DivideByZeroException)
+            //         {
+            //             Console.WriteLine("Zero cannot be a divisor.");
+            //         } // test for other exceptions
+            //     }
+            // }
+
+
+            //-----------------------------------------------------------------------
+            // Query Cancellation in PLINQ
+
+            var source = Enumerable.Range(0, int.MaxValue);
+            var cts = new CancellationTokenSource();
+
+            // Manual cancellation
+            Task.Factory.StartNew(() =>
+            {
+                if (Console.ReadKey().KeyChar == 'c')
+                {
+                    cts.Cancel();
+                }
+            });
+
+            // Timeout cancellation
+            var timer = new System.Timers.Timer(1000); // 1 second
+            int counter = 0;
+            timer.Elapsed += (sender, e) =>
+            {
+                Console.WriteLine($"{++counter} seconds elapsed ...");
+                if (counter == 5)
+                {
+                    cts.Cancel();
+                    timer.Stop();
+                }
+            };
+            timer.Start();
+
+            // Long-run PLINQ query
             try
             {
-                var result = source.AsParallel().Select(n => 10 / n).ToList();
-                foreach (var item in result)
+                source.AsParallel().WithCancellation(cts.Token).ForAll((n) =>
                 {
-                    Console.Write($"{item}|");
-                }
+                    Console.WriteLine($"Processing: {n.ToString().PadLeft(6, '0')}");
+                    cts.Token.ThrowIfCancellationRequested();
+                    Task.Delay(500).Wait();
+                });
             }
-            catch (AggregateException e)
+            catch (OperationCanceledException)
             {
-                foreach (var item in e.InnerExceptions)
-                {
-                    if (item is DivideByZeroException)
-                    {
-                        Console.WriteLine("Zero cannot be a divisor.");
-                    } // test for other exceptions
-                }
+                Console.WriteLine("The PLINQ query is canceled.");
+            }
+            finally
+            {
+                cts.Dispose();
             }
         }
     }
