@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Mod4_PLinqExample
 {
@@ -20,14 +21,37 @@ namespace Mod4_PLinqExample
             //-----------------------------------------------------------------------
             // Order Preservation in PLINQ
 
-            int[] source = Enumerable.Range(0, 20).ToArray();
-            var query1 = source.AsParallel().AsOrdered()
-                .Where(n => n % 2 == 1).Select(n => -n);
-            var query2 = source.AsParallel().AsOrdered()
-                .Where(n => n % 2 == 1).AsUnordered().Select(n => -n);
+            // int[] source = Enumerable.Range(0, 20).ToArray();
+            // var query1 = source.AsParallel().AsOrdered()
+            //     .Where(n => n % 2 == 1).Select(n => -n);
+            // var query2 = source.AsParallel().AsOrdered()
+            //     .Where(n => n % 2 == 1).AsUnordered().Select(n => -n);
 
-            Console.WriteLine(string.Join(", ", query1));
-            Console.WriteLine(string.Join(", ", query2));
+            // Console.WriteLine(string.Join(", ", query1));
+            // Console.WriteLine(string.Join(", ", query2));
+
+            //-----------------------------------------------------------------------
+            // How to parallel the foreach loop? There are two ways:
+
+            // Using Task-Based Parallel Library(TPL)
+            // Using PLINQ
+
+            var source = Enumerable.Range(0, 20).ToList();
+
+            // TPL version
+            Parallel.ForEach(source, (item) =>
+            {
+                Console.Write($"{item.ToString().PadLeft(2, '0')}|");
+            });
+
+            Console.WriteLine();
+            Console.WriteLine("======================");
+
+            // PLINQ version
+            source.AsParallel().ForAll((item) =>
+            {
+                Console.Write($"{item.ToString().PadLeft(2, '0')}|");
+            });
         }
     }
 }
