@@ -1,0 +1,11 @@
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToObjects/bin/Debug/netcoreapp2.1/Mod4_LinqToObjects.deps.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToObjects/bin/Debug/netcoreapp2.1/Mod4_LinqToObjects.runtimeconfig.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToObjects/bin/Debug/netcoreapp2.1/Mod4_LinqToObjects.runtimeconfig.dev.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToObjects/bin/Debug/netcoreapp2.1/Mod4_LinqToObjects.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToObjects/bin/Debug/netcoreapp2.1/Mod4_LinqToObjects.pdb
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToObjects/obj/Debug/netcoreapp2.1/Mod4_LinqToObjects.csprojAssemblyReference.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToObjects/obj/Debug/netcoreapp2.1/Mod4_LinqToObjects.csproj.CoreCompileInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToObjects/obj/Debug/netcoreapp2.1/Mod4_LinqToObjects.AssemblyInfoInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToObjects/obj/Debug/netcoreapp2.1/Mod4_LinqToObjects.AssemblyInfo.cs
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToObjects/obj/Debug/netcoreapp2.1/Mod4_LinqToObjects.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToObjects/obj/Debug/netcoreapp2.1/Mod4_LinqToObjects.pdb
