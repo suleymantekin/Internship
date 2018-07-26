@@ -61,6 +61,24 @@ namespace Mod4_LinqToObjects
 
             writer.Flush();
             writer.Close();
+
+
+            // Querying the File System with LINQ 
+
+            var files = new DirectoryInfo(@"C:\Program Files")
+            .GetFiles("*", SearchOption.AllDirectories).AsParallel();
+
+            var result3 = (from f in files
+                           group f by f.Extension.ToLower()
+            into g
+                           orderby g.Count() descending
+                           select g)
+            .Take(10).Select(g => $"{(g.Key == string.Empty ? "N/A" : g.Key)}:\t{g.Count()}");
+
+            foreach (var item in result3)
+            {
+                System.Console.WriteLine(item);
+            }
         }
     }
 }
