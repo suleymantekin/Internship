@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Mod3_Lab1_WorldApp.csproj"
+                "${workspaceFolder}/Mod4_LinqToXML.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

@@ -4148,11 +4148,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp copy/Mod3_Lab1_WorldApp.csproj",
-      "projectName": "Mod3_Lab1_WorldApp",
-      "projectPath": "/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp copy/Mod3_Lab1_WorldApp.csproj",
+      "projectUniqueName": "/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML/Mod4_LinqToXML.csproj",
+      "projectName": "Mod4_LinqToXML",
+      "projectPath": "/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML/Mod4_LinqToXML.csproj",
       "packagesPath": "/Users/suleymantekin/.nuget/packages/",
-      "outputPath": "/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp copy/obj/",
+      "outputPath": "/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

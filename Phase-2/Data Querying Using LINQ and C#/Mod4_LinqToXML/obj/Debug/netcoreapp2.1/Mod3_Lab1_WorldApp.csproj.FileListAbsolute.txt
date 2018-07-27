@@ -1,22 +1,22 @@
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp/bin/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.deps.json
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp/bin/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.runtimeconfig.json
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp/bin/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.runtimeconfig.dev.json
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp/bin/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.dll
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp/bin/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.pdb
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp/obj/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.csprojAssemblyReference.cache
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp/obj/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.csproj.CoreCompileInputs.cache
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp/obj/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.AssemblyInfoInputs.cache
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp/obj/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.AssemblyInfo.cs
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp/obj/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.dll
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp/obj/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.pdb
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp copy/obj/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.csprojAssemblyReference.cache
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp copy/obj/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.csproj.CoreCompileInputs.cache
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp copy/obj/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.AssemblyInfoInputs.cache
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp copy/obj/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.AssemblyInfo.cs
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp copy/obj/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.dll
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp copy/obj/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.pdb
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp copy/bin/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.deps.json
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp copy/bin/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.runtimeconfig.json
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp copy/bin/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.runtimeconfig.dev.json
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp copy/bin/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.dll
-/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod3_Lab1_WorldApp copy/bin/Debug/netcoreapp2.1/Mod3_Lab1_WorldApp.pdb
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML/bin/Debug/netcoreapp2.1/Mod4_LinqToXML.deps.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML/bin/Debug/netcoreapp2.1/Mod4_LinqToXML.runtimeconfig.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML/bin/Debug/netcoreapp2.1/Mod4_LinqToXML.runtimeconfig.dev.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML/bin/Debug/netcoreapp2.1/Mod4_LinqToXML.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML/bin/Debug/netcoreapp2.1/Mod4_LinqToXML.pdb
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML/obj/Debug/netcoreapp2.1/Mod4_LinqToXML.csprojAssemblyReference.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML/obj/Debug/netcoreapp2.1/Mod4_LinqToXML.csproj.CoreCompileInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML/obj/Debug/netcoreapp2.1/Mod4_LinqToXML.AssemblyInfoInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML/obj/Debug/netcoreapp2.1/Mod4_LinqToXML.AssemblyInfo.cs
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML/obj/Debug/netcoreapp2.1/Mod4_LinqToXML.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML/obj/Debug/netcoreapp2.1/Mod4_LinqToXML.pdb
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML copy/obj/Debug/netcoreapp2.1/Mod4_LinqToXML.csprojAssemblyReference.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML copy/obj/Debug/netcoreapp2.1/Mod4_LinqToXML.csproj.CoreCompileInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML copy/obj/Debug/netcoreapp2.1/Mod4_LinqToXML.AssemblyInfoInputs.cache
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML copy/obj/Debug/netcoreapp2.1/Mod4_LinqToXML.AssemblyInfo.cs
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML copy/obj/Debug/netcoreapp2.1/Mod4_LinqToXML.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML copy/obj/Debug/netcoreapp2.1/Mod4_LinqToXML.pdb
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML copy/bin/Debug/netcoreapp2.1/Mod4_LinqToXML.deps.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML copy/bin/Debug/netcoreapp2.1/Mod4_LinqToXML.runtimeconfig.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML copy/bin/Debug/netcoreapp2.1/Mod4_LinqToXML.runtimeconfig.dev.json
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML copy/bin/Debug/netcoreapp2.1/Mod4_LinqToXML.dll
+/Users/suleymantekin/Google Drive/Internship/Phase-2/Data Querying Using LINQ and C#/Mod4_LinqToXML copy/bin/Debug/netcoreapp2.1/Mod4_LinqToXML.pdb
